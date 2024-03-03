@@ -1,0 +1,149 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ba704f;
+  color: white;
+}
+
+/* Header */
+
+header .jumbotron {
+  font-size: 20px;
+  padding: 20px;
+  background-color: #ff9b50;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: #e25e3e;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  padding-inline: 5rem;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li {
+  display: inline;
+  list-style-type: none;
+}
+
+nav ul li a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+
+  color: white;
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+}
+
+/* Main */
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+main .intro {
+  margin-inline: 2.5rem;
+  padding-top: 1rem;
+}
+
+main #content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+main #content article {
+  margin-inline: 2.5em;
+}
+
+article {
+  background-color: #9d5c0d;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#content img {
+  width: 200px;
+}
+
+/* Aside */
+
+aside {
+  display: flex;
+  margin: auto;
+  padding-block: 1.5rem;
+  flex-direction: row;
+}
+
+.profile {
+  background-color: #9d5c0d;
+  display: flex;
+  gap: 2.5rem;
+}
+
+.profile .profile-photo {
+  width: 75px;
+  flex-shrink: 10%;
+  border-radius: 5px;
+}
+
+/* Footer */
+
+footer {
+  display: inline;
+  background-color: #ff9b50;
+}
+
+.footer {
+  text-align: center;
+}
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column wrap;
+  }
+
+  main aside {
+    align-self: center;
+  }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+  main aside {
+    align-self: stretch;
+  }
+}
